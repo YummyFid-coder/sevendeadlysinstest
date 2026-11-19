@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seven Deadly Sins Anime Test - Which Character Are You?</title>
+  <meta name="description" content="Take the seven deadly sins anime test and answer 40 questions about how you think, act, and help others to discover which of eight characters fits you best.">
+  <link rel="canonical" href="https://thesevendeadlysinstest.com/anime/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Sins Almanac">
+  <meta property="og:title" content="Seven Deadly Sins Anime Test - Which Character Are You?">
+  <meta property="og:description" content="Take the seven deadly sins anime test and answer 40 questions about how you think, act, and help others to discover which of eight characters fits you best.">
+  <meta property="og:url" content="https://thesevendeadlysinstest.com/anime/">
+  <meta name="twitter:card" content="summary">
+  <style>
+* { box-sizing: border-box; }
+html { color-scheme: dark; scroll-padding-top: 16px; }
+body {
+  margin: 0; background: #0a0812; color: #e9e3f2;
+  font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+[hidden] { display: none !important; }
+.wrap { width: calc(100% - 40px); max-width: 720px; margin-inline: auto; }
+h1, h2, h3, .brand { font-family: Georgia, "Times New Roman", serif; letter-spacing: -.01em; }
+h1, h2, h3 { line-height: 1.2; font-weight: 500; }
+h1 { margin: 5px 0 0; font-size: clamp(26px,6vw,38px); }
+h1 em { color: #e8c766; }
+h1::after { content: ""; display: block; width: 60px; height: 2px; margin: 14px auto; background: #c9a227; }
+h2 { margin: 0 0 16px; font-size: clamp(24px,4.5vw,32px); }
+h3 { margin: 26px 0 6px; color: #e8c766; font-size: clamp(20px,3vw,24px); }
+p { margin: 0 0 16px; }
+a { color: #e8c766; text-underline-offset: 4px; }
+a:hover { color: #e9e3f2; }
+:focus-visible { outline: 2px solid #e8c766; outline-offset: 3px; }
+.library { position: absolute; width: 0; height: 0; overflow: hidden; }
+.masthead { border-bottom: 1px solid #2b2338; }
+.masthead .wrap, .brand, .facts, .facts > div, .answers, .match-heading { display: flex; align-items: center; }
+.masthead .wrap { min-height: 62px; justify-content: space-between; }
+.brand { gap: 11px; font-size: clamp(18px,4vw,23px); }
+.seal { padding: 1px 5px; border-block: 1px solid #7a2020; color: #e8c766; font-size: 15px; }
+.menu { position: relative; font-size: 14px; }
+summary { cursor: pointer; }
+.menu summary { padding: 8px 0 8px 10px; color: #e8c766; }
+.menu nav { position: absolute; z-index: 2; right: 0; width: min(248px,80vw); background: #16111f; border: 1px solid #2b2338; padding: 8px; }
+.menu a { display: block; padding: 8px; }
+.card { margin-block: 24px; padding: 24px; background: #16111f; border: 1px solid #2b2338; border-radius: 12px; position: relative; }
+.card::before { content: ""; position: absolute; inset: 0 12px auto; height: 2px; background: linear-gradient(90deg,#c9a22700,#c9a227,#c9a22700); }
+.hero { text-align: center; }
+.plate { display: flex; justify-content: center; align-items: center; gap: 18px; margin-bottom: 12px; }
+.plate::before, .plate::after { content: ""; flex: 1; max-width: 150px; border-top: 1px solid #2b2338; }
+.orbit { width: 160px; height: 160px; flex: none; position: relative; }
+.dial { display: block; width: 100%; height: 100%; }
+.ring { position: absolute; inset: 0; animation: revolve 60s linear infinite; }
+@keyframes revolve { to { transform: rotate(360deg); } }
+.crest { fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; color: #c9a227; }
+.library path { vector-effect: non-scaling-stroke; }
+.ring .crest {
+  position: absolute; top: 50%; left: 50%; width: 28px; height: 28px; margin: -14px;
+  transform: rotate(0deg) translateY(-66px) rotate(0deg);
+}
+.ring .crest:nth-child(2) { transform: rotate(51.429deg) translateY(-66px) rotate(-51.429deg); }
+.ring .crest:nth-child(3) { transform: rotate(102.857deg) translateY(-66px) rotate(-102.857deg); }
+.ring .crest:nth-child(4) { transform: rotate(154.286deg) translateY(-66px) rotate(-154.286deg); }
+.ring .crest:nth-child(5) { transform: rotate(205.714deg) translateY(-66px) rotate(-205.714deg); }
+.ring .crest:nth-child(6) { transform: rotate(257.143deg) translateY(-66px) rotate(-257.143deg); }
+.ring .crest:nth-child(7) { transform: rotate(308.571deg) translateY(-66px) rotate(-308.571deg); }
+.step { margin: 0; color: #c9a227; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; }
+.intro { margin: 0 auto 18px; max-width: 49ch; color: #a49db8; }
+.btn {
+  height: 50px; padding: 0 20px; border: 1px solid #c9a227; border-radius: 8px; cursor: pointer;
+  background: #c9a227; color: #17130a; font: inherit; font-weight: 600; letter-spacing: .02em;
+  transition: background-color .15s, border-color .15s, color .15s, transform .15s;
+}
+.btn.alt { background: #1f1829; color: #e9e3f2; border-color: #3a3048; }
+.btn:hover { background: #e8c766; border-color: #e8c766; color: #17130a; transform: translateY(-1px); }
+.facts { justify-content: space-around; gap: 8px; padding: 0 0 20px; border-bottom: 1px solid #2b2338; color: #a49db8; font-size: 13px; }
+.facts > div { gap: 7px; }
+.facts .crest { width: 18px; height: 18px; }
+.bar { height: 5px; margin: 8px 0 20px; border-radius: 2px; background: #241b30; overflow: hidden; }
+.bar i { display: block; width: 0; height: 100%; background: linear-gradient(90deg,#8a6f1f,#e8c766); }
+.answers { flex-wrap: wrap; gap: 12px; }
+.answers .btn { min-width: 108px; }
+.match-heading { gap: 12px; margin: 10px 0 14px; }
+.match-heading h2 { margin: 0; }
+#match-crest { width: 40px; height: 40px; flex: none; }
+#match-crest use { display: none; }
+#match-crest.meliodas .dragon, #match-crest.gowther .ram, #match-crest.king .bear,
+#match-crest.merlin .boar, #match-crest.escanor .lion, #match-crest.ban .fox,
+#match-crest.elizabeth .wings, #match-crest.diane .serpent { display: inline; }
+.guide { margin: 36px 0; }
+.guide h2:not(:first-child) { border-top: 1px solid #2b2338; padding-top: 26px; margin-top: 32px; }
+.faq details { border-top: 1px solid #2b2338; }
+.faq summary { padding-block: 12px; }
+.faq details p { color: #a49db8; }
+.related ul { margin: 0; padding-left: 20px; }
+.related li + li { margin-top: 6px; }
+@media (max-width: 600px) {
+  .orbit { width: 120px; height: 120px; }
+  .ring .crest:nth-child(1) { transform: rotate(0deg) translateY(-46px) rotate(0deg); }
+  .ring .crest:nth-child(2) { transform: rotate(51.429deg) translateY(-46px) rotate(-51.429deg); }
+  .ring .crest:nth-child(3) { transform: rotate(102.857deg) translateY(-46px) rotate(-102.857deg); }
+  .ring .crest:nth-child(4) { transform: rotate(154.286deg) translateY(-46px) rotate(-154.286deg); }
+  .ring .crest:nth-child(5) { transform: rotate(205.714deg) translateY(-46px) rotate(-205.714deg); }
+  .ring .crest:nth-child(6) { transform: rotate(257.143deg) translateY(-46px) rotate(-257.143deg); }
+  .ring .crest:nth-child(7) { transform: rotate(308.571deg) translateY(-46px) rotate(-308.571deg); }
+  .facts { font-size: 12px; }
+  .facts > div { flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ring { animation: none; }
+  .btn { transition: none; }
+  .btn:hover { transform: none; }
+}
+
+.charcard {
+  position: relative; display: grid; place-content: center; justify-items: center; gap: 8px;
+  margin: 12px 0 16px; height: 190px; padding: 20px 16px; overflow: hidden;
+  border: 1px solid #2b2338; border-radius: 14px; text-align: center;
+}
+.charcard::before {
+  content: ""; position: absolute; inset: 0 0 auto; height: 2px;
+  background: linear-gradient(90deg,#12101a00,currentColor,#12101a00);
+}
+.cc-sigil, .cc-weapon { display: block; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; }
+.cc-sigil { width: 96px; height: 96px; stroke-width: 1.4; }
+.cc-weapon { position: absolute; top: 50%; width: 44px; height: 44px; stroke-width: 1.3; opacity: .85; }
+.cc-left { left: 18px; transform: translateY(-50%) rotate(-14deg); }
+.cc-right { right: 18px; transform: translateY(-50%) rotate(14deg) scaleX(-1); }
+.cc-sin { font-size: 11px; font-weight: 600; line-height: 1.5; letter-spacing: .14em; text-transform: uppercase; }
+.char-meliodas .charcard { color: #c9a227; border-color: #80691c; background: linear-gradient(160deg,#c9a22729,#12101a); }
+.char-meliodas .charcard .cc-weapon { color: #7a2020; }
+.char-diane .charcard { color: #2f6b4f; border-color: #254a39; background: linear-gradient(160deg,#2f6b4f29,#12101a); }
+.char-diane .charcard .cc-weapon { color: #cfc6b8; }
+.char-ban .charcard { color: #8b2c2c; border-color: #602323; background: linear-gradient(160deg,#8b2c2c29,#12101a); }
+.char-ban .charcard .cc-weapon { color: #6b7280; }
+.char-king .charcard { color: #2f7d6b; border-color: #26564b; background: linear-gradient(160deg,#2f7d6b29,#12101a); }
+.char-king .charcard .cc-weapon { color: #1f3a34; }
+.char-gowther .charcard { color: #7a5aa8; border-color: #554073; background: linear-gradient(160deg,#7a5aa829,#12101a); }
+.char-gowther .charcard .cc-weapon { color: #9aa0b5; }
+.char-merlin .charcard { color: #4a3a7a; border-color: #362b56; background: linear-gradient(160deg,#4a3a7a29,#12101a); }
+.char-merlin .charcard .cc-weapon { color: #e8c766; }
+.char-escanor .charcard { color: #e8c766; border-color: #947e43; background: linear-gradient(160deg,#e8c76629,#12101a); }
+.char-escanor .charcard .cc-weapon { color: #f2ede3; }
+.char-elizabeth .charcard { color: #7fb3d5; border-color: #52778f; background: linear-gradient(160deg,#7fb3d529,#12101a); }
+.char-elizabeth .charcard .cc-weapon { color: #f2ede3; }
+.char-diane .cc-sin, .char-ban .cc-sin, .char-king .cc-sin, .char-gowther .cc-sin, .char-merlin .cc-sin {
+  padding-inline: 6px; background: #f2ede3;
+}
+@media (max-width: 480px) {
+  .charcard { height: 160px; }
+  .cc-weapon { display: none; }
+  .cc-sigil { width: 74px; height: 74px; }
+}
+  </style>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+</head>
+<body class="anime">
+<svg class="library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="sigil-dragon" viewBox="0 0 32 32">
+      <path d="M22 8l-4-5-2 4-5-2 1 4-6 1 2 3-5 4 4 1-2 5 5-1 1 5 3-2c6 4 14-1 14-8"/>
+      <path d="M24 7l5 3-2 9-7-6z"/>
+      <path d="M23 12l2 1"/>
+    </symbol>
+    <symbol id="sigil-serpent" viewBox="0 0 32 32">
+      <path d="M23 8c-3-4-15-4-16 3-1 7 18 4 18 12 0 5-9 7-14 2"/>
+      <path d="M20 7a1 1 0 1 0 2 0 1 1 0 1 0-2 0z"/>
+      <path d="M24 9a1 1 0 1 0 2 0 1 1 0 1 0-2 0z"/>
+    </symbol>
+    <symbol id="sigil-fox" viewBox="0 0 32 32">
+      <path d="M5 15 4 4l9 7z"/>
+      <path d="M19 11l9-7-1 11z"/>
+      <path d="M5 15q4 7 11 12 7-5 11-12"/>
+      <path d="M17 25c6 4 13-1 12-10-2 4-4 5-7 6"/>
+    </symbol>
+    <symbol id="sigil-bear" viewBox="0 0 32 32">
+      <path d="M6 12c-5-6 2-11 7-6a12 12 0 0 1 6 0c5-5 12 0 7 6 5 8 0 16-10 16S1 20 6 12z"/>
+      <path d="M9 15h4"/>
+      <path d="M19 15h4"/>
+    </symbol>
+    <symbol id="sigil-ram" viewBox="0 0 32 32">
+      <path d="M13 13C9 2 1 7 4 14c2 5 9 4 7-1-1-3-5-3-5 0"/>
+      <path d="M19 13c4-11 12-6 9 1-2 5-9 4-7-1 1-3 5-3 5 0"/>
+      <path d="M16 11a5 8 0 1 1 0 16 5 8 0 1 1 0-16z"/>
+    </symbol>
+    <symbol id="sigil-boar" viewBox="0 0 32 32">
+      <path d="M16 5a11 11 0 1 1 0 22 11 11 0 1 1 0-22z"/>
+      <path d="M9 22q-5 0-5-7 3 4 6 4"/>
+      <path d="M23 22q5 0 5-7-3 4-6 4"/>
+      <path d="M12 18q4-3 8 0"/>
+    </symbol>
+    <symbol id="sigil-lion" viewBox="0 0 32 32">
+      <path d="M16 7V2m0 5a9 9 0 0 1 7.8 4.5"/>
+      <path d="M23.8 11.5 28 9m-4.2 2.5a9 9 0 0 1 0 9"/>
+      <path d="M23.8 20.5 28 23m-4.2-2.5a9 9 0 0 1-7.8 4.5"/>
+      <path d="M16 25v5m0-5a9 9 0 0 1-7.8-4.5"/>
+      <path d="M8.2 20.5 4 23m4.2-2.5a9 9 0 0 1 0-9"/>
+      <path d="M8.2 11.5 4 9m4.2 2.5A9 9 0 0 1 16 7"/>
+    </symbol>
+    <symbol id="sigil-wings" viewBox="0 0 32 32">
+      <path d="M15 25C7 23 4 15 3 7c5 6 10 6 13 13C19 13 24 13 29 7c-1 8-4 16-12 18"/>
+      <path d="M7 15l6 5"/>
+      <path d="M25 15l-6 5"/>
+    </symbol>
+  </defs>
+</svg>
+  <header class="masthead">
+    <div class="wrap">
+      <div class="brand"><span class="seal" aria-hidden="true">VII</span>The Sins Almanac</div>
+      <details class="menu">
+        <summary>Quizzes</summary>
+        <nav aria-label="Quizzes">
+          <a href="/">seven deadly sins test</a>
+          <a href="/anime/" aria-current="page">seven deadly sins anime test</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero card" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <div class="plate" aria-hidden="true">
+          <div class="orbit">
+            <svg class="dial" viewBox="0 0 160 160" fill="none" focusable="false">
+              <circle cx="80" cy="80" r="45" stroke="#2b2338"/>
+              <circle cx="80" cy="80" r="37" stroke="#7a2020" stroke-dasharray="1 5"/>
+              <path d="M80 57l5 18 16 5-16 5-5 18-5-18-16-5 16-5z" stroke="#c9a227"/>
+              <path d="m80 72 6 8-6 8-6-8z" stroke="#e8c766"/>
+            </svg>
+            <div class="ring">
+              <svg class="crest" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#sigil-dragon"/></svg>
+              <svg class="crest" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#sigil-serpent"/></svg>
+              <svg class="crest" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#sigil-fox"/></svg>
+              <svg class="crest" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#sigil-bear"/></svg>
+              <svg class="crest" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#sigil-ram"/></svg>
+              <svg class="crest" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#sigil-boar"/></svg>
+              <svg class="crest" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#sigil-lion"/></svg>
+            </div>
+          </div>
+        </div>
+        <p class="step">Character quiz</p>
+        <h1 id="page-title">Seven Deadly Sins <em>Anime Test</em></h1>
+        <p class="intro">Discover which of eight characters shares your instincts, from how you help a friend to how you face a challenge.</p>
+        <button class="btn" type="button" id="start" aria-controls="quiz">Find my character</button>
+        <noscript><p>Enable JavaScript to answer the quiz and see your result.</p></noscript>
+      </div>
+    </section>
+
+    <div class="facts">
+      <div><svg class="crest" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M6 7h15v18H6z M11 3h15v18"/></svg><span>40 questions</span></div>
+      <div><svg class="crest" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M3 16l7-7 7 7-7 7z M16 16l6-6 7 6-7 7z"/></svg><span>Agree / Disagree</span></div>
+      <div><svg class="crest" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16 3l3 9 9 4-9 3-3 10-3-10-9-3 9-4z"/></svg><span>8 characters</span></div>
+    </div>
+
+<section id="quiz" class="quiz-panel card" aria-label="Character quiz" hidden>
+  <p id="question-count" class="step"></p>
+  <div id="progress" class="bar" role="progressbar" aria-label="Questions answered" aria-valuemin="0" aria-valuemax="40" aria-valuenow="0">
+    <i id="progress-fill"></i>
+  </div>
+  <h2 id="question" tabindex="-1" aria-describedby="question-count"></h2>
+  <div class="answers">
+    <button type="button" class="btn" id="agree">Agree</button>
+    <button type="button" class="btn alt" id="disagree">Disagree</button>
+  </div>
+</section>
+<section id="result" class="quiz-panel card" aria-labelledby="match-name" hidden>
+  <p class="step">Your character match</p>
+  <div class="charcard" id="charcard">
+    <svg class="cc-weapon cc-left" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+      <defs>
+        <symbol id="cc-blade" viewBox="0 0 32 32">
+          <path d="M5 27l13-13"/>
+          <path d="M12 20l-3-3m4 4 4 3"/>
+          <path d="m14 16 6-9 2 3 5-5-4 13-6 2z"/>
+        </symbol>
+        <symbol id="cc-hammer" viewBox="0 0 32 32">
+          <path d="M5 28 18 15"/>
+          <path d="m13 12 7-8 9 8-7 8z"/>
+        </symbol>
+        <symbol id="cc-staff-links" viewBox="0 0 32 32">
+          <path d="m3 29 6-7m4-4 6-6m4-4 6-6"/>
+          <path d="M12.5 20a1.6 1.6 0 1 1-3.2 0 1.6 1.6 0 1 1 3.2 0z"/>
+          <path d="M22.8 10a1.6 1.6 0 1 1-3.2 0 1.6 1.6 0 1 1 3.2 0z"/>
+        </symbol>
+        <symbol id="cc-spear" viewBox="0 0 32 32">
+          <path d="M5 28 21 12"/>
+          <path d="m19 13 2-6 8-5-4 9z"/>
+        </symbol>
+        <symbol id="cc-bow" viewBox="0 0 32 32">
+          <path d="M6 4q24 10 4 24L6 4z"/>
+          <path d="M3 19 28 12l-5-2m5 2-3 4"/>
+        </symbol>
+        <symbol id="cc-crystal" viewBox="0 0 32 32">
+          <path d="M16 28V15"/>
+          <path d="m16 3 5 3v5l-5 3-5-3V6z"/>
+        </symbol>
+        <symbol id="cc-axe" viewBox="0 0 32 32">
+          <path d="M6 28 23 7"/>
+          <path d="M18 6q5 4 11 4-2 7-9 10 1-6-5-9z"/>
+        </symbol>
+        <symbol id="cc-feather" viewBox="0 0 32 32">
+          <path d="M4 24Q7 11 27 5q-3 12-20 17"/>
+          <path d="M9 19q8-2 13-8"/>
+        </symbol>
+      </defs>
+      <use/>
+    </svg>
+    <svg class="cc-sigil" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use/></svg>
+    <svg class="cc-weapon cc-right" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use/></svg>
+    <div class="cc-sin"></div>
+  </div>
+  <div class="match-heading">
+    <svg id="match-crest" class="crest" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+      <use class="dragon" href="#sigil-dragon"/>
+      <use class="serpent" href="#sigil-serpent"/>
+      <use class="fox" href="#sigil-fox"/>
+      <use class="bear" href="#sigil-bear"/>
+      <use class="ram" href="#sigil-ram"/>
+      <use class="boar" href="#sigil-boar"/>
+      <use class="lion" href="#sigil-lion"/>
+      <use class="wings" href="#sigil-wings"/>
+    </svg>
+    <h2 id="match-name" class="result-title" tabindex="-1"></h2>
+  </div>
+  <p id="match-description"></p>
+  <p><a id="match-link"></a></p>
+  <button id="restart" class="btn alt" type="button">Take the test again</button>
+</section>
+
+<article id="guide" class="guide">
+  <h2>Find your place in the party</h2>
+  <p>Picture the group an hour before a journey. Somebody is checking the route, somebody is making a late arrival feel welcome, and somebody has already volunteered to carry a stranger's bags. All three want the trip to go well. Each has spotted a different job that needs doing. That is the idea behind this Seven Deadly Sins anime test. The forty choices put you in ordinary situations where more than one response makes sense. The part of the scene that catches your attention can say quite a bit about the part you would play in the party.</p>
+  <p>Take a recent day with people you know as your reference point. Think about the last time a friend asked for help, a team decision dragged on, or a plan fell apart. What did you actually do first? If you remember taking a friend aside after an argument, that memory can guide an answer even if you also admire the person who spoke up in the room. Use Agree when the stated preference sounds closer to yours. Use Disagree when you lean toward the other option in the statement.</p>
+  <h2>Meet the eight possible matches</h2>
+  <h3>Meliodas</h3>
+  <p>Meliodas makes the first move when the group has ground to cover. Imagine six friends stuck outside a closed venue in the rain. His instinct would be to find somewhere dry, get everyone moving, and give them a chance to talk once they are settled. There is room for humor in that style of leadership. A small joke can make an awkward first step much easier. A Meliodas match favors the choices that turn worry into something the whole group can do together.</p>
+  <h3>Gowther</h3>
+  <p>Gowther's curiosity starts with people. When two friends come away from the same conversation with completely different ideas about what happened, the exact words matter to him. He might ask each person what they thought a promise meant, then trace the moment their expectations diverged. In these questions, that tendency shows up as observation, a willingness to ask a plain question, and patience with silence. You might recognize it if you have ever stopped midway through giving advice to check whether you understood the problem.</p>
+  <h3>King</h3>
+  <p>King pays attention to what has been entrusted to him. Think of the regular who arrives early to a weekly game because someone will need to set out the chairs and check on the newest player. He can look cautious from across the room. Up close, his caution has names attached to it. He remembers who got left behind last time. A King result often fits someone who sees the cost of a change and wants a workable safeguard before the group commits.</p>
+  <h3>Merlin</h3>
+  <p>Merlin wants a chance to try the puzzling idea. Give her a lock that jams every third turn and she will want to know what happens on turn two. In this quiz, her choices involve experiments, comparisons, and finding a method other people can use again. That curiosity can be generous. The hour spent testing a repair today could save the whole team an afternoon next week. A Merlin match makes sense when an unanswered question draws you back even after the immediate trouble has passed.</p>
+  <h3>Escanor</h3>
+  <p>Escanor's route through these choices involves standing where people can see him. Picture a team about to present an unpopular decision. Someone has to give it a clear voice and take the first difficult question. Escanor represents the impulse to put your name to it. There is an obligation in that kind of confidence. Once you tell the room that you will handle something, the rest of the group gets to count on you to follow through.</p>
+  <h3>Ban</h3>
+  <p>Ban's loyalty gets personal. If a friend is stranded across town, he is the one already looking for a ride. The plan might involve an inconvenient detour, a favor called in at short notice, or an improvised fix that gets one person home tonight. His answers favor independent action and keeping a promise to a particular person. When a Ban match feels familiar, consider who usually gets your first call when something goes wrong, and whose calls you always pick up.</p>
+  <h3>Elizabeth</h3>
+  <p>Elizabeth keeps the door to a conversation open. She would notice the teammate who has gone quiet during an otherwise lively dinner and find an easy way to bring them back in. Her questions ask whether you make space for a second account, offer someone another chance, or stay with a person who feels exposed. In a group that already has plenty of people offering fixes, sitting down beside someone can be a deliberate and surprisingly brave choice.</p>
+  <h3>Diane</h3>
+  <p>Diane makes support tangible. If a newcomer looks uncomfortable on their first day, she might pull up a second chair and do the hard part alongside them. Feelings tend to be out in the open with this match. People can tell when you are delighted to see them and when a careless remark has hurt. The Diane choices pair that candor with action, especially when somebody needs a partner and everyone else is still working out what to say.</p>
+  <h2>What decides your character?</h2>
+  <p>Each statement compares two approaches. Your response gives one point to the character associated with your preferred approach. Across the forty questions, each of the eight characters appears ten times, five on each side of a choice. The character with the most points becomes your match. A close finish is quite possible. You might have King's instinct for protecting a shared space and Ban's willingness to drop everything for a friend. Think back to the questions where those loyalties pulled in different directions.</p>
+  <p>Try comparing answers with someone who knows you well. Pick one question that gave you pause and describe the scene you pictured. One of you may have imagined a group of strangers; the other may have been thinking about a sister or a lifelong friend. That small difference often makes for a better conversation than simply trading character names. You can play again with a different situation in mind and see which decisions move your result.</p>
+</article>
+
+<section id="faq" class="faq card">
+  <h2>Frequently asked questions</h2>
+  <details>
+    <summary>Do I need to have watched the anime?</summary>
+    <p>You can play with no knowledge of the story. Every question describes an everyday choice, and the result explains the approach you share with your character.</p>
+  </details>
+  <details>
+    <summary>Which characters can I match with?</summary>
+    <p>The eight possible matches are Meliodas, Gowther, King, Merlin, Escanor, Ban, Elizabeth, and Diane. Each appears on one side of ten choices.</p>
+  </details>
+  <details>
+    <summary>How does the quiz break a tie?</summary>
+    <p>A tie goes to the character with the most wins in questions that directly compared the tied characters. If several are still level, your most recent answer favoring one of those finalists decides the match.</p>
+  </details>
+  <details>
+    <summary>Can I take the test again?</summary>
+    <p>Yes. Select Take the test again beneath your result to start a fresh set of answers. The same forty statements appear in the same order so you can see how a different choice affects your match.</p>
+  </details>
+</section>
+<section class="related card">
+  <h2>Explore the other tests</h2>
+  <ul>
+    <li><a href="/">seven deadly sins test</a></li>
+    <li><a href="/quiz/">seven deadly sins quiz</a></li>
+    <li><a href="/percentage-quiz/">seven deadly sins percentage quiz</a></li>
+  </ul>
+</section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need to have watched the anime?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can play with no knowledge of the story. Every question describes an everyday choice, and the result explains the approach you share with your character."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which characters can I match with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The eight possible matches are Meliodas, Gowther, King, Merlin, Escanor, Ban, Elizabeth, and Diane. Each appears on one side of ten choices."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the quiz break a tie?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A tie goes to the character with the most wins in questions that directly compared the tied characters. If several are still level, your most recent answer favoring one of those finalists decides the match."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I take the test again?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Select Take the test again beneath your result to start a fresh set of answers. The same forty statements appear in the same order so you can see how a different choice affects your match."
+      }
+    }
+  ]
+}
+</script>
+
+<script>
+(() => {
+  const characters = {
+    "Meliodas": "You help the group take its first step. When everyone has an opinion and nobody is moving, you can find a small action that gives people a common direction. Your match comes from the choices where you trusted yourself to lead while leaving room for others to come along.",
+    "Gowther": "You want to understand what someone meant, especially when their words and actions seem at odds. You favored questions that clear up an assumption and observations that others might miss. People can count on you to notice the detail that changes how a conversation looks.",
+    "King": "You remember who is counting on the group. Your answers favored keeping promises, protecting shared spaces, and checking the risks that excitement can hide. A friend who has quietly worried about being left behind is likely to notice the care in your preparations.",
+    "Merlin": "A puzzle holds your attention long enough for you to test an answer. You favored comparing methods, trying unfamiliar routes, and learning why a fix works. When everyone else has moved on from a minor mishap, you may already be finding a way to keep it from happening again.",
+    "Escanor": "You are willing to be seen when a decision needs a voice. Your choices favored speaking up, putting your name to a difficult decision, and giving others someone to count on. You can lend a team confidence by taking responsibility for words that would otherwise go unsaid.",
+    "Ban": "When somebody you love needs help, you find a way to show up. Your choices favored personal loyalty and independent action, even on a day when the plan had to change. A favor that sounds inconvenient to the rest of the group can feel quite simple once you know who is asking.",
+    "Elizabeth": "You make room for people who might otherwise lose their say. Your answers favored hearing a second account, reopening a conversation, and offering someone a way back after a mistake. That patience gives a strained friendship a chance to become an honest one again.",
+    "Diane": "You show what you feel through what you do. Your choices favored pulling up a chair, sharing a load, and joining somebody at the difficult part of a task. The person beside you gets both a practical hand and a clear sense that their company matters."
+  };
+
+  const questions = [
+    { agree: "Meliodas", disagree: "Gowther",
+      prompt: "If a meeting stalls, I would get everyone trying one idea before asking what is holding each person back." },
+    { agree: "Escanor", disagree: "Ban",
+      prompt: "If a friend is treated unfairly, I would challenge the decision in public before trying to get them out of the situation myself." },
+    { agree: "King", disagree: "Merlin",
+      prompt: "If our old meeting place needs repair, I would pick a familiar fix over testing a promising new one." },
+    { agree: "Elizabeth", disagree: "Diane",
+      prompt: "When a teammate is struggling, I would first invite them to tell me how it feels. Doing the task alongside them would come second." },
+    { agree: "Merlin", disagree: "Escanor",
+      prompt: "When someone doubts my idea, I would build a small demonstration before making my case in front of the room." },
+    { agree: "Diane", disagree: "Meliodas",
+      prompt: "On a group hike, I would stay beside the slowest walker even if it meant someone else had to lead the way." },
+    { agree: "Gowther", disagree: "King",
+      prompt: "When a friend suddenly goes quiet, I would ask what changed before stepping in to protect their space." },
+    { agree: "Ban", disagree: "Elizabeth",
+      prompt: "If an event leaves my friend out, I would take them somewhere else before asking the organizers to reconsider." },
+    { agree: "Gowther", disagree: "Merlin",
+      prompt: "If a group chat went wrong, I would ask how people read the message before testing a new way to send updates." },
+    { agree: "Ban", disagree: "Diane",
+      prompt: "If my closest friend needed help moving, I would take an awkward solo errand off their list before joining the group doing the lifting." },
+    { agree: "Merlin", disagree: "Ban",
+      prompt: "Given a broken bike and a friend who needs a lift, I would first try to fix the bike, even if I could give them my own." },
+    { agree: "Diane", disagree: "Gowther",
+      prompt: "When a friend looks upset, I would offer company and a shared activity before asking which part of the day was hardest." },
+    { agree: "Escanor", disagree: "Elizabeth",
+      prompt: "If a team rule hurt someone, I would take the floor to challenge it before arranging a private conversation." },
+    { agree: "Meliodas", disagree: "King",
+      prompt: "With a storm on the horizon, I would get the whole group moving before making sure our campsite was secure." },
+    { agree: "King", disagree: "Escanor",
+      prompt: "I would take the quiet job of keeping a team safe over the visible job of defending its decision." },
+    { agree: "Elizabeth", disagree: "Meliodas",
+      prompt: "On a tight schedule, I would pause to hear a newcomer's worry even if the rest of the group was ready for me to lead." },
+    { agree: "King", disagree: "Ban",
+      prompt: "If a friend wanted a risky last-minute favor, I would keep my existing promise to look after the group." },
+    { agree: "Elizabeth", disagree: "Gowther",
+      prompt: "After a hurtful misunderstanding, I would first help the two people reconnect. Working out exactly how it began could wait." },
+    { agree: "Escanor", disagree: "Diane",
+      prompt: "At a fundraiser, I would take the microphone if I could choose between speaking and working beside the setup crew." },
+    { agree: "Meliodas", disagree: "Merlin",
+      prompt: "With a free afternoon, I would get friends together for a spontaneous outing before trying a new project on my own." },
+    { agree: "Ban", disagree: "Meliodas",
+      prompt: "If a teammate missed the last train, I would go pick them up myself before calling the group to organize a ride." },
+    { agree: "Gowther", disagree: "Escanor",
+      prompt: "When a disagreement gets heated, I would ask both sides to explain a specific remark before stating my own position." },
+    { agree: "Merlin", disagree: "Elizabeth",
+      prompt: "If an invitation system left people out, I would test how it failed before reaching out to smooth things over." },
+    { agree: "Diane", disagree: "King",
+      prompt: "If an old community space felt neglected, I would gather people for a hands-on cleanup before drawing up a plan to safeguard it." },
+    { agree: "Merlin", disagree: "Diane",
+      prompt: "When a shelf keeps falling, I would compare two ways to mount it before getting a friend to help hold it in place." },
+    { agree: "Diane", disagree: "Merlin",
+      prompt: "For a neighborhood garden, I would join the planting crew before signing up to compare which layout works best." },
+    { agree: "Ban", disagree: "Gowther",
+      prompt: "If a friend backed out without warning, I would cover their shift before asking what made them change their mind." },
+    { agree: "Gowther", disagree: "Ban",
+      prompt: "When a friend asks for a big favor out of the blue, I would ask what led up to it before finding a way to say yes." },
+    { agree: "Elizabeth", disagree: "King",
+      prompt: "If a new member made a mistake, I would hear their side before suggesting rules to protect the rest of the group." },
+    { agree: "King", disagree: "Elizabeth",
+      prompt: "If someone wanted to rejoin the group after breaking a promise, I would ask for safeguards before offering another chance." },
+    { agree: "Escanor", disagree: "Meliodas",
+      prompt: "With a reluctant team, I would make a clear public commitment before leading everyone into a small first step." },
+    { agree: "Meliodas", disagree: "Escanor",
+      prompt: "If an event lost its host, I would start an activity to keep everyone together before making a formal announcement from the stage." },
+    { agree: "Escanor", disagree: "Merlin",
+      prompt: "When a proposal is challenged, I would stand up and defend it before running a fresh test to settle the question." },
+    { agree: "Meliodas", disagree: "Diane",
+      prompt: "At a crowded station, I would take charge of getting the group to its train before pairing up with someone who looks uneasy." },
+    { agree: "Elizabeth", disagree: "Ban",
+      prompt: "If a friend and a stranger were at odds, I would give the stranger room to speak before taking my friend's side." },
+    { agree: "King", disagree: "Gowther",
+      prompt: "When a teammate starts missing practice, I would first make sure their responsibilities are covered, then ask what has changed." },
+    { agree: "Diane", disagree: "Elizabeth",
+      prompt: "When a newcomer feels out of place, I would give them a real job to do beside me before inviting them to talk about it." },
+    { agree: "Merlin", disagree: "King",
+      prompt: "If our usual route felt unreliable, I would compare a new route with it before putting extra safeguards on the old one." },
+    { agree: "Ban", disagree: "Escanor",
+      prompt: "If a friend's idea were brushed aside, I would help them put it into action before making a public case for it." },
+    { agree: "Gowther", disagree: "Meliodas",
+      prompt: "If people lost interest halfway through a game, I would ask what changed before rallying everyone for another round." }
+  ];
+
+  const quiz = document.getElementById("quiz");
+  const result = document.getElementById("result");
+  const question = document.getElementById("question");
+  const counter = document.getElementById("question-count");
+  const progress = document.getElementById("progress");
+  const fill = document.getElementById("progress-fill");
+  const matchName = document.getElementById("match-name");
+  const picks = [];
+
+  function setProgress(answered) {
+    progress.setAttribute("aria-valuenow", answered);
+    fill.style.width = (answered / questions.length * 100) + "%";
+  }
+
+  function presentQuestion() {
+    const index = picks.length;
+    counter.textContent = "Question " + (index + 1) + " of " + questions.length;
+    setProgress(index);
+    question.textContent = questions[index].prompt;
+    question.focus({ preventScroll: true });
+    quiz.scrollIntoView({ block: "start" });
+  }
+
+  function begin() {
+    if (quiz.hidden) {
+      picks.length = 0;
+      result.hidden = true;
+      quiz.hidden = false;
+    }
+    presentQuestion();
+  }
+
+  function leaders(names, points) {
+    const best = Math.max(...names.map(name => points[name]));
+    return names.filter(name => points[name] === best);
+  }
+
+  function findMatch(answers) {
+    const names = Object.keys(characters);
+    const points = Object.fromEntries(names.map(name => [name, 0]));
+    for (const choice of answers) points[choice]++;
+    const contenders = leaders(names, points);
+    if (contenders.length === 1) return contenders[0];
+
+    const directWins = Object.fromEntries(contenders.map(name => [name, 0]));
+    questions.forEach(({ agree, disagree }, index) => {
+      if (contenders.includes(agree) && contenders.includes(disagree)) {
+        directWins[answers[index]]++;
+      }
+    });
+    const finalists = leaders(contenders, directWins);
+    return answers.slice().reverse().find(name => finalists.includes(name));
+  }
+
+  const cardArt = {
+    Meliodas: { sigil: "dragon", item: "blade", sin: "Wrath" },
+    Diane: { sigil: "serpent", item: "hammer", sin: "Envy" },
+    Ban: { sigil: "fox", item: "staff-links", sin: "Greed" },
+    King: { sigil: "bear", item: "spear", sin: "Sloth" },
+    Gowther: { sigil: "ram", item: "bow", sin: "Lust" },
+    Merlin: { sigil: "boar", item: "crystal", sin: "Gluttony" },
+    Escanor: { sigil: "lion", item: "axe", sin: "Pride" },
+    Elizabeth: { sigil: "wings", item: "feather", sin: "Mercy" }
+  };
+
+  function showCharacterCard(name) {
+    const card = document.getElementById("charcard");
+    const art = cardArt[name];
+    for (const character of Object.keys(cardArt)) {
+      document.body.classList.toggle("char-" + character.toLowerCase(), character === name);
+    }
+    card.querySelector(".cc-sigil use").setAttribute("href", "#sigil-" + art.sigil);
+    for (const icon of card.querySelectorAll(".cc-weapon > use")) {
+      icon.setAttribute("href", "#cc-" + art.item);
+    }
+    card.querySelector(".cc-sin").textContent = art.sin;
+  }
+
+  function presentResult() {
+    const name = findMatch(picks);
+    showCharacterCard(name);
+    const link = document.getElementById("match-link");
+    document.getElementById("match-crest").setAttribute("class", "crest " + name.toLowerCase());
+    matchName.textContent = name;
+    document.getElementById("match-description").textContent = characters[name];
+    link.href = "/results/" + name.toLowerCase() + "/";
+    link.textContent = name.toLowerCase() + " seven deadly sins test";
+    setProgress(questions.length);
+    quiz.hidden = true;
+    result.hidden = false;
+    matchName.focus({ preventScroll: true });
+    result.scrollIntoView({ block: "start" });
+  }
+
+  function answer(side) {
+    if (quiz.hidden) return;
+    picks.push(questions[picks.length][side]);
+    if (picks.length === questions.length) {
+      presentResult();
+    } else {
+      presentQuestion();
+    }
+  }
+
+  document.getElementById("start").addEventListener("click", begin);
+  document.getElementById("restart").addEventListener("click", begin);
+  document.getElementById("agree").addEventListener("click", () => answer("agree"));
+  document.getElementById("disagree").addEventListener("click", () => answer("disagree"));
+})();
+</script>
+  </main>
+</body>
+</html>
